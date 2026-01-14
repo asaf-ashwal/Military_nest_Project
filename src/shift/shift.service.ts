@@ -3,8 +3,8 @@ import { Shift } from './shift.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { type shiftType } from './dto/shiftType';
+import { AssignmentService } from 'src/assignment/assignment.service';
 // import { UsersService } from 'src/users/users.service';
-// import { AssignmentService } from 'src/assignment/assignment.service';
 
 @Injectable()
 export class ShiftService {

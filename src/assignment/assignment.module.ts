@@ -11,7 +11,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     UsersModule,
   TypeOrmModule.forFeature([AssignmentSchema]),],
   providers: [UsersService, AssignmentService],
-  exports:[AssignmentService]
+  exports:[AssignmentService,
+    // UsersService
+  ]
 })
 export class AssignmentModule {}
 
