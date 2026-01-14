@@ -11,7 +11,7 @@ export class ShiftService {
   constructor(
     @InjectRepository(Shift)
     private shiftRepository: Repository<Shift>,
-    // private readonly assignmentService: AssignmentService,
+    private readonly assignmentService: AssignmentService,
   ) {}
   // const commanderId =23
   // const soldierId =''

@@ -7,11 +7,13 @@ import { UsersModule } from 'src/users/users.module';
 // import { AssignmentService } from 'src/assignment/assignment.service';
 import { AssignmentModule } from 'src/assignment/assignment.module';
 import { ShiftController } from './shift.controller';
+import { Repository } from 'typeorm';
 
 @Module({
   imports: [
     UsersModule,
     AssignmentModule,
+    Repository,
     TypeOrmModule.forFeature([ShiftSchema]),
   ],
   providers: [UsersService, ShiftService

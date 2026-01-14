@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { UsersService } from 'src/users/users.service';
 import { Repository } from 'typeorm';
 import { Assignment } from './assignment.entity';
@@ -8,10 +8,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 export class AssignmentService {
   constructor(
      @InjectRepository(Assignment)
-    private readonly usersService: UsersService,    
     private assignmentRepository: Repository<Assignment>,
-    
-
+    private readonly usersService: UsersService, 
   ) {}
 
   async createAssignment(commanderId: number, soldierId: number){
